@@ -6,4 +6,4 @@
 
 
 
-- Molecular_transformer model path:https://ibm.ent.box.com/v/MolecularTransformerModels MIT_mixed_augm_model_average_20.pt and put this in transformer_model/experiments/checkpoints/USPTO-50K_all/
+- Molecular_transformer model path:https://ibm.ent.box.com/v/MolecularTransformerModels MIT_mixed_augm_model_average_20.pt and put this in transformer_model/experiments/checkpoints/all/
