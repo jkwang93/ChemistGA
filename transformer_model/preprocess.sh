@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-dataset_all=USPTO-50K_all # USPTO-50K_all
+dataset_all=all # all
 python preprocess.py -train_src data/${dataset_all}/src-train.txt \
                      -train_tgt data/${dataset_all}/tgt-train.txt \
                      -valid_src data/${dataset_all}/src-val.txt \

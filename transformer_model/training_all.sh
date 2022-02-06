@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dataset=USPTO-50K_all
+dataset=all
 python  train.py -data data/${dataset}/${dataset} \
                    -save_model experiments/checkpoints/${dataset}/${dataset}_model \
                    -seed 42 -gpu_ranks 2 -save_checkpoint_steps 10000 -keep_checkpoint 2 \

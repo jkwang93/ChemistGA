@@ -1,5 +1,5 @@
 class OPT_TRANSLATE:
-    def __init__(self, models = ['experiments/checkpoints/USPTO-50K_all/MIT_mixed_augm_model_average_20.pt'], src = None, reverse = False):
+    def __init__(self, models = ['experiments/checkpoints/all/MIT_mixed_augm_model_average_20.pt'], src = None, reverse = False):
         self.alpha=0.0
         self.attn_debug=False
         self.batch_size=64
@@ -39,4 +39,4 @@ class OPT_TRANSLATE:
         self.window_stride=0.01
 
         if reverse:
-            models = ['experiments/checkpoints/USPTO-50K_all/MIT_mixed_augm_model_average_20.pt']
+            models = ['experiments/checkpoints/all/MIT_mixed_augm_model_average_20.pt']
