@@ -1,0 +1,1097 @@
+nb_gpu 4
+opt_d_model 500
+[2020-03-22 22:39:39,027 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-22 22:39:39,027 INFO]  * vocabulary size. source = 201; target = 201
+[2020-03-22 22:39:39,028 INFO] Building model...
+opt_d_model 256
+[2020-03-22 22:39:49,721 INFO] NMTModel(
+  (encoder): TransformerEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(201, 256, padding_idx=1)
+        )
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (transformer): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (6): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (7): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (8): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (9): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (10): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (11): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (12): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm()
+  )
+  (decoder): TransformerDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(201, 256, padding_idx=1)
+        )
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (transformer_layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (6): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (7): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (8): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (9): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (10): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (11): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (12): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=256, out_features=256, bias=True)
+          (linear_values): Linear(in_features=256, out_features=256, bias=True)
+          (linear_query): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (layer_norm): LayerNorm()
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm()
+        (layer_norm_2): LayerNorm()
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm()
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=256, out_features=201, bias=True)
+    (1): LogSoftmax()
+  )
+)
+[2020-03-22 22:39:49,727 INFO] encoder: 17147904
+[2020-03-22 22:39:49,727 INFO] decoder: 20575945
+[2020-03-22 22:39:49,727 INFO] * number of parameters: 37723849
+[2020-03-22 22:39:49,731 INFO] Start training...
+[2020-03-22 22:39:53,490 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-22 22:53:26,644 INFO] Step 1000/250000; acc:  83.04; ppl:  1.61; xent: 0.48; lr: 0.00017; 19833/20265 tok/s;    813 sec
+[2020-03-22 22:56:00,026 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-22 23:06:56,149 INFO] Step 2000/250000; acc:  89.13; ppl:  1.39; xent: 0.33; lr: 0.00035; 18798/19267 tok/s;   1623 sec
+[2020-03-22 23:12:02,036 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-22 23:20:28,769 INFO] Step 3000/250000; acc:  95.79; ppl:  1.13; xent: 0.12; lr: 0.00052; 19385/19724 tok/s;   2435 sec
+[2020-03-22 23:28:07,657 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-22 23:34:11,210 INFO] Step 4000/250000; acc:  95.92; ppl:  1.12; xent: 0.11; lr: 0.00070; 18957/19358 tok/s;   3258 sec
+[2020-03-22 23:44:32,621 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-22 23:48:01,519 INFO] Step 5000/250000; acc:  97.93; ppl:  1.06; xent: 0.06; lr: 0.00087; 18566/18997 tok/s;   4088 sec
+[2020-03-23 00:00:47,667 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 00:01:43,557 INFO] Step 6000/250000; acc:  98.05; ppl:  1.05; xent: 0.05; lr: 0.00105; 18928/19214 tok/s;   4910 sec
+[2020-03-23 00:15:24,372 INFO] Step 7000/250000; acc:  99.01; ppl:  1.03; xent: 0.03; lr: 0.00122; 19094/19580 tok/s;   5731 sec
+[2020-03-23 00:17:07,971 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 00:28:52,752 INFO] Step 8000/250000; acc:  97.78; ppl:  1.07; xent: 0.06; lr: 0.00140; 19345/19800 tok/s;   6539 sec
+[2020-03-23 00:33:04,035 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 00:42:19,928 INFO] Step 9000/250000; acc:  99.11; ppl:  1.02; xent: 0.02; lr: 0.00132; 19529/20028 tok/s;   7346 sec
+[2020-03-23 00:49:03,878 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 00:55:48,853 INFO] Step 10000/250000; acc:  99.21; ppl:  1.02; xent: 0.02; lr: 0.00125; 19575/19910 tok/s;   8155 sec
+[2020-03-23 00:55:49,671 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 00:57:13,953 INFO] Validation perplexity: 1.0197
+[2020-03-23 00:57:13,953 INFO] Validation accuracy: 99.2206
+[2020-03-23 00:57:13,956 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_10000.pt
+[2020-03-23 01:06:24,869 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 01:10:40,493 INFO] Step 11000/250000; acc:  99.28; ppl:  1.02; xent: 0.02; lr: 0.00119; 19426/19736 tok/s;   9047 sec
+[2020-03-23 01:22:21,281 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 01:24:08,762 INFO] Step 12000/250000; acc:  99.46; ppl:  1.01; xent: 0.01; lr: 0.00114; 19003/19289 tok/s;   9855 sec
+[2020-03-23 01:37:37,367 INFO] Step 13000/250000; acc:  99.44; ppl:  1.02; xent: 0.01; lr: 0.00110; 19729/20176 tok/s;  10664 sec
+[2020-03-23 01:38:27,134 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 01:51:10,404 INFO] Step 14000/250000; acc:  99.30; ppl:  1.02; xent: 0.02; lr: 0.00106; 19599/20059 tok/s;  11477 sec
+[2020-03-23 01:54:30,417 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 02:04:47,527 INFO] Step 15000/250000; acc:  99.30; ppl:  1.02; xent: 0.02; lr: 0.00102; 19142/19500 tok/s;  12294 sec
+[2020-03-23 02:10:36,328 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 02:18:14,094 INFO] Step 16000/250000; acc:  99.33; ppl:  1.01; xent: 0.01; lr: 0.00099; 19413/19764 tok/s;  13101 sec
+[2020-03-23 02:26:45,233 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 02:32:01,870 INFO] Step 17000/250000; acc:  99.34; ppl:  1.02; xent: 0.02; lr: 0.00096; 19250/19740 tok/s;  13928 sec
+[2020-03-23 02:43:04,702 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 02:45:46,762 INFO] Step 18000/250000; acc:  99.40; ppl:  1.01; xent: 0.01; lr: 0.00093; 18940/19165 tok/s;  14753 sec
+[2020-03-23 02:59:16,364 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 02:59:25,010 INFO] Step 19000/250000; acc:  99.59; ppl:  1.01; xent: 0.01; lr: 0.00091; 19634/20025 tok/s;  15572 sec
+[2020-03-23 03:13:05,426 INFO] Step 20000/250000; acc:  99.53; ppl:  1.01; xent: 0.01; lr: 0.00088; 18643/19245 tok/s;  16392 sec
+[2020-03-23 03:13:06,529 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 03:14:35,086 INFO] Validation perplexity: 1.01498
+[2020-03-23 03:14:35,086 INFO] Validation accuracy: 99.41
+[2020-03-23 03:14:35,090 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_20000.pt
+[2020-03-23 03:17:08,299 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 03:28:24,582 INFO] Step 21000/250000; acc:  99.62; ppl:  1.01; xent: 0.01; lr: 0.00086; 19103/19471 tok/s;  17311 sec
+[2020-03-23 03:33:30,463 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 03:42:12,760 INFO] Step 22000/250000; acc:  99.63; ppl:  1.01; xent: 0.01; lr: 0.00084; 19320/19637 tok/s;  18139 sec
+[2020-03-23 03:49:46,904 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 03:55:54,595 INFO] Step 23000/250000; acc:  99.59; ppl:  1.01; xent: 0.01; lr: 0.00082; 18916/19371 tok/s;  18961 sec
+[2020-03-23 04:06:06,390 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 04:09:42,458 INFO] Step 24000/250000; acc:  99.67; ppl:  1.01; xent: 0.01; lr: 0.00081; 18735/18999 tok/s;  19789 sec
+[2020-03-23 04:22:31,869 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 04:23:34,192 INFO] Step 25000/250000; acc:  99.67; ppl:  1.01; xent: 0.01; lr: 0.00079; 19126/19477 tok/s;  20621 sec
+[2020-03-23 04:37:11,020 INFO] Step 26000/250000; acc:  99.67; ppl:  1.01; xent: 0.01; lr: 0.00078; 19044/19397 tok/s;  21438 sec
+[2020-03-23 04:38:50,030 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 04:51:02,370 INFO] Step 27000/250000; acc:  99.64; ppl:  1.01; xent: 0.01; lr: 0.00076; 18636/19084 tok/s;  22269 sec
+[2020-03-23 04:55:14,766 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 05:04:50,112 INFO] Step 28000/250000; acc:  99.71; ppl:  1.01; xent: 0.01; lr: 0.00075; 19374/19881 tok/s;  23097 sec
+[2020-03-23 05:11:36,341 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 05:18:30,952 INFO] Step 29000/250000; acc:  99.72; ppl:  1.01; xent: 0.01; lr: 0.00073; 19612/20030 tok/s;  23917 sec
+[2020-03-23 05:27:34,512 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 05:31:56,462 INFO] Step 30000/250000; acc:  99.75; ppl:  1.01; xent: 0.01; lr: 0.00072; 19505/19896 tok/s;  24723 sec
+[2020-03-23 05:31:57,288 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 05:33:21,234 INFO] Validation perplexity: 1.01542
+[2020-03-23 05:33:21,234 INFO] Validation accuracy: 99.4766
+[2020-03-23 05:33:21,237 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_30000.pt
+[2020-03-23 05:44:55,406 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 05:46:47,985 INFO] Step 31000/250000; acc:  99.73; ppl:  1.01; xent: 0.01; lr: 0.00071; 18659/19037 tok/s;  25614 sec
+[2020-03-23 06:00:08,061 INFO] Step 32000/250000; acc:  99.68; ppl:  1.01; xent: 0.01; lr: 0.00070; 19518/19850 tok/s;  26415 sec
+[2020-03-23 06:00:51,289 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 06:13:32,218 INFO] Step 33000/250000; acc:  99.65; ppl:  1.01; xent: 0.01; lr: 0.00069; 19510/19757 tok/s;  27219 sec
+[2020-03-23 06:16:44,823 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 06:27:04,078 INFO] Step 34000/250000; acc:  99.74; ppl:  1.01; xent: 0.01; lr: 0.00068; 19435/19868 tok/s;  28031 sec
+[2020-03-23 06:32:48,414 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 06:40:33,737 INFO] Step 35000/250000; acc:  99.61; ppl:  1.01; xent: 0.01; lr: 0.00067; 19490/19887 tok/s;  28840 sec
+[2020-03-23 06:48:54,771 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 06:54:18,386 INFO] Step 36000/250000; acc:  99.77; ppl:  1.00; xent: 0.00; lr: 0.00066; 18841/19127 tok/s;  29665 sec
+[2020-03-23 07:05:18,195 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 07:08:05,992 INFO] Step 37000/250000; acc:  99.76; ppl:  1.01; xent: 0.01; lr: 0.00065; 19499/19913 tok/s;  30493 sec
+[2020-03-23 07:21:38,514 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 07:21:54,148 INFO] Step 38000/250000; acc:  99.79; ppl:  1.00; xent: 0.00; lr: 0.00064; 18511/19063 tok/s;  31321 sec
+[2020-03-23 07:35:35,136 INFO] Step 39000/250000; acc:  99.73; ppl:  1.01; xent: 0.01; lr: 0.00063; 19023/19634 tok/s;  32142 sec
+[2020-03-23 07:38:01,275 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 07:49:09,482 INFO] Step 40000/250000; acc:  99.81; ppl:  1.00; xent: 0.00; lr: 0.00063; 18787/19209 tok/s;  32956 sec
+[2020-03-23 07:49:10,565 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 07:50:39,383 INFO] Validation perplexity: 1.01834
+[2020-03-23 07:50:39,383 INFO] Validation accuracy: 99.4841
+[2020-03-23 07:50:39,387 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_40000.pt
+[2020-03-23 07:55:32,011 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 08:04:07,046 INFO] Step 41000/250000; acc:  99.82; ppl:  1.00; xent: 0.00; lr: 0.00062; 19523/19920 tok/s;  33854 sec
+[2020-03-23 08:11:34,416 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 08:17:43,878 INFO] Step 42000/250000; acc:  99.82; ppl:  1.00; xent: 0.00; lr: 0.00061; 19694/20086 tok/s;  34670 sec
+[2020-03-23 08:27:50,667 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 08:31:34,188 INFO] Step 43000/250000; acc:  99.86; ppl:  1.00; xent: 0.00; lr: 0.00060; 19402/19757 tok/s;  35501 sec
+[2020-03-23 08:44:14,365 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 08:45:22,997 INFO] Step 44000/250000; acc:  99.87; ppl:  1.00; xent: 0.00; lr: 0.00060; 19366/19843 tok/s;  36330 sec
+[2020-03-23 08:59:03,305 INFO] Step 45000/250000; acc:  99.84; ppl:  1.00; xent: 0.00; lr: 0.00059; 19072/19350 tok/s;  37150 sec
+[2020-03-23 09:00:35,410 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 09:12:49,511 INFO] Step 46000/250000; acc:  99.84; ppl:  1.00; xent: 0.00; lr: 0.00058; 18830/19270 tok/s;  37976 sec
+[2020-03-23 09:16:56,357 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 09:26:39,459 INFO] Step 47000/250000; acc:  99.87; ppl:  1.00; xent: 0.00; lr: 0.00058; 19206/19542 tok/s;  38806 sec
+[2020-03-23 09:33:18,870 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 09:40:29,126 INFO] Step 48000/250000; acc:  99.85; ppl:  1.00; xent: 0.00; lr: 0.00057; 19462/19922 tok/s;  39636 sec
+[2020-03-23 09:49:32,361 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 09:54:04,559 INFO] Step 49000/250000; acc:  99.89; ppl:  1.00; xent: 0.00; lr: 0.00056; 19697/20037 tok/s;  40451 sec
+[2020-03-23 10:05:42,196 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 10:07:45,000 INFO] Step 50000/250000; acc:  99.92; ppl:  1.00; xent: 0.00; lr: 0.00056; 19077/19521 tok/s;  41272 sec
+[2020-03-23 10:07:45,979 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 10:09:17,691 INFO] Validation perplexity: 1.02097
+[2020-03-23 10:09:17,691 INFO] Validation accuracy: 99.493
+[2020-03-23 10:09:17,694 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_50000.pt
+[2020-03-23 10:22:51,148 INFO] Step 51000/250000; acc:  99.88; ppl:  1.00; xent: 0.00; lr: 0.00055; 19110/19431 tok/s;  42178 sec
+[2020-03-23 10:23:30,089 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 10:36:35,815 INFO] Step 52000/250000; acc:  99.93; ppl:  1.00; xent: 0.00; lr: 0.00055; 19579/19969 tok/s;  43002 sec
+[2020-03-23 10:39:44,303 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 10:50:25,032 INFO] Step 53000/250000; acc:  99.77; ppl:  1.00; xent: 0.00; lr: 0.00054; 18749/19046 tok/s;  43832 sec
+[2020-03-23 10:56:12,783 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 11:04:15,629 INFO] Step 54000/250000; acc:  99.89; ppl:  1.00; xent: 0.00; lr: 0.00054; 19443/19795 tok/s;  44662 sec
+[2020-03-23 11:12:32,361 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 11:17:58,569 INFO] Step 55000/250000; acc:  99.88; ppl:  1.00; xent: 0.00; lr: 0.00053; 19325/19676 tok/s;  45485 sec
+[2020-03-23 11:28:49,469 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 11:31:44,433 INFO] Step 56000/250000; acc:  99.88; ppl:  1.00; xent: 0.00; lr: 0.00053; 19054/19448 tok/s;  46311 sec
+[2020-03-23 11:45:12,094 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 11:45:34,067 INFO] Step 57000/250000; acc:  99.91; ppl:  1.00; xent: 0.00; lr: 0.00052; 19208/19582 tok/s;  47141 sec
+[2020-03-23 11:59:14,087 INFO] Step 58000/250000; acc:  99.95; ppl:  1.00; xent: 0.00; lr: 0.00052; 19264/19599 tok/s;  47961 sec
+[2020-03-23 12:01:33,272 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 12:13:01,493 INFO] Step 59000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00051; 18792/19101 tok/s;  48788 sec
+[2020-03-23 12:17:53,335 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 12:26:48,827 INFO] Step 60000/250000; acc:  99.91; ppl:  1.00; xent: 0.00; lr: 0.00051; 19321/19720 tok/s;  49615 sec
+[2020-03-23 12:26:49,837 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 12:28:14,913 INFO] Validation perplexity: 1.02371
+[2020-03-23 12:28:14,913 INFO] Validation accuracy: 99.4961
+[2020-03-23 12:28:14,916 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_60000.pt
+[2020-03-23 12:35:29,610 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 12:41:49,241 INFO] Step 61000/250000; acc:  99.92; ppl:  1.00; xent: 0.00; lr: 0.00051; 19738/20093 tok/s;  50516 sec
+[2020-03-23 12:51:51,873 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 12:55:37,382 INFO] Step 62000/250000; acc:  99.93; ppl:  1.00; xent: 0.00; lr: 0.00050; 19591/19968 tok/s;  51344 sec
+[2020-03-23 13:07:59,842 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 13:09:16,406 INFO] Step 63000/250000; acc:  99.93; ppl:  1.00; xent: 0.00; lr: 0.00050; 18807/19203 tok/s;  52163 sec
+[2020-03-23 13:23:00,806 INFO] Step 64000/250000; acc:  99.91; ppl:  1.00; xent: 0.00; lr: 0.00049; 16785/16933 tok/s;  52987 sec
+[2020-03-23 13:24:28,331 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 13:36:42,196 INFO] Step 65000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00049; 19413/19691 tok/s;  53809 sec
+[2020-03-23 13:40:37,444 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 13:50:16,884 INFO] Step 66000/250000; acc:  99.89; ppl:  1.00; xent: 0.00; lr: 0.00049; 19435/19801 tok/s;  54623 sec
+[2020-03-23 13:56:45,262 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 14:03:53,342 INFO] Step 67000/250000; acc:  99.88; ppl:  1.00; xent: 0.00; lr: 0.00048; 19551/19866 tok/s;  55440 sec
+[2020-03-23 14:12:52,627 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 14:17:33,550 INFO] Step 68000/250000; acc:  99.92; ppl:  1.00; xent: 0.00; lr: 0.00048; 19300/19744 tok/s;  56260 sec
+[2020-03-23 14:28:59,335 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 14:31:05,501 INFO] Step 69000/250000; acc:  99.90; ppl:  1.00; xent: 0.00; lr: 0.00048; 19347/19564 tok/s;  57072 sec
+[2020-03-23 14:44:39,855 INFO] Step 70000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00047; 19486/19878 tok/s;  57886 sec
+[2020-03-23 14:44:40,696 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 14:46:06,408 INFO] Validation perplexity: 1.02585
+[2020-03-23 14:46:06,408 INFO] Validation accuracy: 99.5058
+[2020-03-23 14:46:06,411 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_70000.pt
+[2020-03-23 14:46:37,992 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 14:59:39,108 INFO] Step 71000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00047; 19686/20116 tok/s;  58786 sec
+[2020-03-23 15:02:40,565 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 15:13:22,358 INFO] Step 72000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00047; 19564/19950 tok/s;  59609 sec
+[2020-03-23 15:19:04,765 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 15:27:15,121 INFO] Step 73000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00046; 19472/19837 tok/s;  60442 sec
+[2020-03-23 15:35:33,764 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 15:41:12,657 INFO] Step 74000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00046; 18455/18873 tok/s;  61279 sec
+[2020-03-23 15:51:54,574 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 15:54:52,920 INFO] Step 75000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00046; 19392/19779 tok/s;  62099 sec
+[2020-03-23 16:07:57,538 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 16:08:25,447 INFO] Step 76000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00045; 19697/20057 tok/s;  62912 sec
+[2020-03-23 16:22:01,475 INFO] Step 77000/250000; acc:  99.93; ppl:  1.00; xent: 0.00; lr: 0.00045; 19065/19393 tok/s;  63728 sec
+[2020-03-23 16:24:11,386 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 16:35:43,171 INFO] Step 78000/250000; acc:  99.92; ppl:  1.00; xent: 0.00; lr: 0.00045; 18607/19075 tok/s;  64550 sec
+[2020-03-23 16:40:25,125 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 16:49:18,210 INFO] Step 79000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00044; 19414/19858 tok/s;  65365 sec
+[2020-03-23 16:56:27,643 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 17:02:48,645 INFO] Step 80000/250000; acc:  99.95; ppl:  1.00; xent: 0.00; lr: 0.00044; 19744/20221 tok/s;  66175 sec
+[2020-03-23 17:02:49,459 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 17:04:14,848 INFO] Validation perplexity: 1.02744
+[2020-03-23 17:04:14,848 INFO] Validation accuracy: 99.509
+[2020-03-23 17:04:14,851 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_80000.pt
+[2020-03-23 17:14:00,096 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 17:17:51,572 INFO] Step 81000/250000; acc:  99.89; ppl:  1.00; xent: 0.00; lr: 0.00044; 19280/19620 tok/s;  67078 sec
+[2020-03-23 17:30:05,304 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 17:31:28,016 INFO] Step 82000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00044; 19042/19514 tok/s;  67895 sec
+[2020-03-23 17:45:18,282 INFO] Step 83000/250000; acc:  99.95; ppl:  1.00; xent: 0.00; lr: 0.00043; 18575/19102 tok/s;  68725 sec
+[2020-03-23 17:46:37,473 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 17:59:06,106 INFO] Step 84000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00043; 19024/19477 tok/s;  69553 sec
+[2020-03-23 18:02:54,678 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 18:12:36,104 INFO] Step 85000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00043; 19515/19900 tok/s;  70363 sec
+[2020-03-23 18:18:54,305 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 18:26:06,850 INFO] Step 86000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00043; 19410/19823 tok/s;  71173 sec
+[2020-03-23 18:34:51,112 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 18:39:32,420 INFO] Step 87000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00042; 19512/19818 tok/s;  71979 sec
+[2020-03-23 18:50:54,699 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 18:53:08,160 INFO] Step 88000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00042; 19184/19473 tok/s;  72795 sec
+[2020-03-23 19:06:37,700 INFO] Step 89000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00042; 19098/19409 tok/s;  73604 sec
+[2020-03-23 19:07:02,084 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 19:20:09,523 INFO] Step 90000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00042; 19317/19850 tok/s;  74416 sec
+[2020-03-23 19:20:10,368 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 19:21:33,965 INFO] Validation perplexity: 1.02823
+[2020-03-23 19:21:33,965 INFO] Validation accuracy: 99.5167
+[2020-03-23 19:21:33,968 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_90000.pt
+[2020-03-23 19:24:31,667 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 19:35:21,795 INFO] Step 91000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00041; 19009/19397 tok/s;  75328 sec
+[2020-03-23 19:40:56,035 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 19:49:12,687 INFO] Step 92000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00041; 18694/19089 tok/s;  76159 sec
+[2020-03-23 19:57:22,231 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 20:03:03,534 INFO] Step 93000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00041; 19374/19776 tok/s;  76990 sec
+[2020-03-23 20:13:41,527 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 20:16:50,313 INFO] Step 94000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00041; 18992/19362 tok/s;  77817 sec
+[2020-03-23 20:30:01,140 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 20:30:35,687 INFO] Step 95000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00041; 19412/19856 tok/s;  78642 sec
+[2020-03-23 20:44:09,865 INFO] Step 96000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00040; 18618/18854 tok/s;  79456 sec
+[2020-03-23 20:46:12,597 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 20:57:49,356 INFO] Step 97000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00040; 19123/19449 tok/s;  80276 sec
+[2020-03-23 21:02:29,221 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 21:11:39,400 INFO] Step 98000/250000; acc:  99.95; ppl:  1.00; xent: 0.00; lr: 0.00040; 18745/19035 tok/s;  81106 sec
+[2020-03-23 21:18:53,540 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 21:25:28,220 INFO] Step 99000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00040; 19327/19756 tok/s;  81935 sec
+[2020-03-23 21:35:09,847 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 21:39:13,099 INFO] Step 100000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00040; 19025/19416 tok/s;  82760 sec
+[2020-03-23 21:39:14,055 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 21:40:43,828 INFO] Validation perplexity: 1.02902
+[2020-03-23 21:40:43,828 INFO] Validation accuracy: 99.5171
+[2020-03-23 21:40:43,831 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_100000.pt
+[2020-03-23 21:53:04,952 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 21:54:31,194 INFO] Step 101000/250000; acc:  99.95; ppl:  1.00; xent: 0.00; lr: 0.00039; 19438/19850 tok/s;  83678 sec
+[2020-03-23 22:08:06,481 INFO] Step 102000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00039; 18762/19421 tok/s;  84493 sec
+[2020-03-23 22:09:17,193 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 22:21:46,652 INFO] Step 103000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00039; 19669/20075 tok/s;  85313 sec
+[2020-03-23 22:25:31,962 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 22:35:33,576 INFO] Step 104000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00039; 19148/19454 tok/s;  86140 sec
+[2020-03-23 22:41:49,598 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 22:49:18,660 INFO] Step 105000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00039; 19245/19717 tok/s;  86965 sec
+[2020-03-23 22:58:11,754 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 23:03:07,696 INFO] Step 106000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00038; 19469/19860 tok/s;  87794 sec
+[2020-03-23 23:14:31,596 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 23:16:53,149 INFO] Step 107000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00038; 18819/19277 tok/s;  88620 sec
+[2020-03-23 23:30:26,061 INFO] Step 108000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00038; 19621/19983 tok/s;  89433 sec
+[2020-03-23 23:30:43,845 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 23:44:02,723 INFO] Step 109000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00038; 19195/19577 tok/s;  90249 sec
+[2020-03-23 23:46:52,737 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-23 23:57:47,923 INFO] Step 110000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00038; 19683/20041 tok/s;  91074 sec
+[2020-03-23 23:57:48,740 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-23 23:59:17,896 INFO] Validation perplexity: 1.02989
+[2020-03-23 23:59:17,896 INFO] Validation accuracy: 99.5211
+[2020-03-23 23:59:17,900 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_110000.pt
+[2020-03-24 00:04:46,053 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 00:13:10,397 INFO] Step 111000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00038; 18914/19266 tok/s;  91997 sec
+[2020-03-24 00:21:13,196 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 00:27:05,665 INFO] Step 112000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00037; 19032/19527 tok/s;  92832 sec
+[2020-03-24 00:37:41,654 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 00:40:57,978 INFO] Step 113000/250000; acc:  99.95; ppl:  1.00; xent: 0.00; lr: 0.00037; 19122/19513 tok/s;  93664 sec
+[2020-03-24 00:54:07,511 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 00:54:49,218 INFO] Step 114000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00037; 19317/19672 tok/s;  94496 sec
+[2020-03-24 01:08:30,522 INFO] Step 115000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00037; 19122/19532 tok/s;  95317 sec
+[2020-03-24 01:10:29,513 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 01:22:17,280 INFO] Step 116000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00037; 19103/19595 tok/s;  96144 sec
+[2020-03-24 01:26:49,690 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 01:36:03,811 INFO] Step 117000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00037; 19156/19743 tok/s;  96970 sec
+[2020-03-24 01:43:08,996 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 01:49:52,689 INFO] Step 118000/250000; acc:  99.92; ppl:  1.00; xent: 0.00; lr: 0.00036; 18818/19032 tok/s;  97799 sec
+[2020-03-24 01:59:33,956 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 02:03:42,839 INFO] Step 119000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00036; 19186/19455 tok/s;  98629 sec
+[2020-03-24 02:15:56,968 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 02:17:32,262 INFO] Step 120000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00036; 19032/19418 tok/s;  99459 sec
+[2020-03-24 02:17:33,234 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-24 02:19:02,628 INFO] Validation perplexity: 1.03146
+[2020-03-24 02:19:02,628 INFO] Validation accuracy: 99.5158
+[2020-03-24 02:19:02,632 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_120000.pt
+[2020-03-24 02:32:45,844 INFO] Step 121000/250000; acc:  99.94; ppl:  1.00; xent: 0.00; lr: 0.00036; 18441/18996 tok/s; 100372 sec
+[2020-03-24 02:33:51,911 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 02:46:33,473 INFO] Step 122000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00036; 19315/19740 tok/s; 101200 sec
+[2020-03-24 02:50:09,454 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 03:00:05,152 INFO] Step 123000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00036; 19538/19892 tok/s; 102012 sec
+[2020-03-24 03:06:08,820 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 03:13:33,980 INFO] Step 124000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00035; 19666/20116 tok/s; 102820 sec
+[2020-03-24 03:22:07,653 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 03:27:04,919 INFO] Step 125000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00035; 19453/19734 tok/s; 103631 sec
+[2020-03-24 03:38:17,163 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 03:40:46,175 INFO] Step 126000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00035; 18682/19106 tok/s; 104453 sec
+[2020-03-24 03:54:25,388 INFO] Step 127000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00035; 18850/19341 tok/s; 105272 sec
+[2020-03-24 03:54:37,982 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 04:08:18,318 INFO] Step 128000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00035; 18814/19382 tok/s; 106105 sec
+[2020-03-24 04:11:05,458 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 04:22:10,728 INFO] Step 129000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00035; 19098/19428 tok/s; 106937 sec
+[2020-03-24 04:27:32,021 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 04:36:03,311 INFO] Step 130000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00035; 18698/19041 tok/s; 107770 sec
+[2020-03-24 04:36:04,294 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-24 04:37:35,133 INFO] Validation perplexity: 1.03196
+[2020-03-24 04:37:35,133 INFO] Validation accuracy: 99.516
+[2020-03-24 04:37:35,137 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_130000.pt
+[2020-03-24 04:45:30,250 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 04:51:26,853 INFO] Step 131000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00035; 18865/19209 tok/s; 108693 sec
+[2020-03-24 05:01:54,948 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 05:05:17,059 INFO] Step 132000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00034; 18935/19257 tok/s; 109524 sec
+[2020-03-24 05:18:23,134 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 05:19:12,275 INFO] Step 133000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00034; 18749/19063 tok/s; 110359 sec
+[2020-03-24 05:32:58,148 INFO] Step 134000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00034; 19092/19687 tok/s; 111185 sec
+[2020-03-24 05:34:51,387 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 05:46:51,738 INFO] Step 135000/250000; acc: 100.00; ppl:  1.00; xent: 0.00; lr: 0.00034; 18885/19250 tok/s; 112018 sec
+[2020-03-24 05:51:19,788 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 06:00:42,661 INFO] Step 136000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00034; 19429/19844 tok/s; 112849 sec
+[2020-03-24 06:07:32,785 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 06:14:11,835 INFO] Step 137000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00034; 19504/19909 tok/s; 113658 sec
+[2020-03-24 06:23:31,356 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 06:27:42,456 INFO] Step 138000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00034; 19558/19982 tok/s; 114469 sec
+[2020-03-24 06:39:31,513 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 06:41:11,248 INFO] Step 139000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00034; 19391/19803 tok/s; 115278 sec
+[2020-03-24 06:54:33,397 INFO] Step 140000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00033; 16400/16792 tok/s; 116080 sec
+[2020-03-24 06:54:34,251 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-24 06:55:58,658 INFO] Validation perplexity: 1.03166
+[2020-03-24 06:55:58,658 INFO] Validation accuracy: 99.5229
+[2020-03-24 06:55:58,661 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_140000.pt
+[2020-03-24 06:56:56,480 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 07:09:28,063 INFO] Step 141000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00033; 19395/19919 tok/s; 116975 sec
+[2020-03-24 07:12:54,958 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 07:23:14,738 INFO] Step 142000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00033; 15625/15928 tok/s; 117801 sec
+[2020-03-24 07:29:17,840 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 07:36:51,553 INFO] Step 143000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00033; 19479/19816 tok/s; 118618 sec
+[2020-03-24 07:45:18,380 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 07:50:19,539 INFO] Step 144000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00033; 19209/19496 tok/s; 119426 sec
+[2020-03-24 08:01:21,171 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 08:03:56,854 INFO] Step 145000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00033; 18854/19513 tok/s; 120243 sec
+[2020-03-24 08:17:30,812 INFO] Step 146000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00033; 19365/19661 tok/s; 121057 sec
+[2020-03-24 08:17:35,843 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 08:30:58,569 INFO] Step 147000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00033; 19349/19738 tok/s; 121865 sec
+[2020-03-24 08:33:33,410 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 08:44:37,589 INFO] Step 148000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00032; 18911/19352 tok/s; 122684 sec
+[2020-03-24 08:49:53,392 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 08:58:21,466 INFO] Step 149000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00032; 18696/19208 tok/s; 123508 sec
+[2020-03-24 09:06:06,721 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 09:12:04,260 INFO] Step 150000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00032; 19706/19950 tok/s; 124331 sec
+[2020-03-24 09:12:05,113 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-24 09:13:29,057 INFO] Validation perplexity: 1.03266
+[2020-03-24 09:13:29,057 INFO] Validation accuracy: 99.5178
+[2020-03-24 09:13:29,060 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_150000.pt
+[2020-03-24 09:23:34,626 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 09:27:01,604 INFO] Step 151000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00032; 18948/19343 tok/s; 125228 sec
+[2020-03-24 09:39:55,709 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 09:40:49,971 INFO] Step 152000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00032; 19241/19641 tok/s; 126056 sec
+[2020-03-24 09:54:19,134 INFO] Step 153000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00032; 19512/20174 tok/s; 126866 sec
+[2020-03-24 09:56:01,742 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 10:07:46,150 INFO] Step 154000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00032; 19673/20018 tok/s; 127673 sec
+[2020-03-24 10:11:58,373 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 10:21:18,164 INFO] Step 155000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00032; 19330/19682 tok/s; 128485 sec
+[2020-03-24 10:28:00,507 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 10:34:57,060 INFO] Step 156000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00032; 19215/19529 tok/s; 129304 sec
+[2020-03-24 10:44:31,707 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 10:48:56,564 INFO] Step 157000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00032; 18784/19098 tok/s; 130143 sec
+[2020-03-24 11:00:51,563 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 11:02:37,163 INFO] Step 158000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00031; 19690/20054 tok/s; 130964 sec
+[2020-03-24 11:16:21,551 INFO] Step 159000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00031; 19012/19381 tok/s; 131788 sec
+[2020-03-24 11:17:15,075 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 11:30:09,443 INFO] Step 160000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00031; 19131/19667 tok/s; 132616 sec
+[2020-03-24 11:30:10,376 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-24 11:31:37,046 INFO] Validation perplexity: 1.03416
+[2020-03-24 11:31:37,046 INFO] Validation accuracy: 99.5168
+[2020-03-24 11:31:37,049 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_160000.pt
+[2020-03-24 11:35:00,007 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 11:45:24,214 INFO] Step 161000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00031; 19183/19405 tok/s; 133531 sec
+[2020-03-24 11:51:20,473 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 11:59:09,152 INFO] Step 162000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00031; 18991/19371 tok/s; 134356 sec
+[2020-03-24 12:07:43,498 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 12:12:58,489 INFO] Step 163000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00031; 19202/19625 tok/s; 135185 sec
+[2020-03-24 12:24:04,591 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 12:26:46,657 INFO] Step 164000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00031; 19011/19254 tok/s; 136013 sec
+[2020-03-24 12:40:24,725 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 12:40:33,293 INFO] Step 165000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00031; 18590/19115 tok/s; 136840 sec
+[2020-03-24 12:54:16,004 INFO] Step 166000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00031; 19381/19689 tok/s; 137663 sec
+[2020-03-24 12:56:45,728 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 13:07:57,034 INFO] Step 167000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00031; 19401/19819 tok/s; 138484 sec
+[2020-03-24 13:13:03,503 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 13:21:47,660 INFO] Step 168000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00030; 18766/19093 tok/s; 139314 sec
+[2020-03-24 13:29:33,862 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 13:35:44,257 INFO] Step 169000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00030; 18747/18972 tok/s; 140151 sec
+[2020-03-24 13:45:56,575 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 13:49:29,614 INFO] Step 170000/250000; acc:  99.96; ppl:  1.00; xent: 0.00; lr: 0.00030; 19256/19586 tok/s; 140976 sec
+[2020-03-24 13:49:30,496 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-24 13:50:58,747 INFO] Validation perplexity: 1.03453
+[2020-03-24 13:50:58,747 INFO] Validation accuracy: 99.5185
+[2020-03-24 13:50:58,751 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_170000.pt
+[2020-03-24 14:03:43,108 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 14:04:43,840 INFO] Step 171000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00030; 19385/19776 tok/s; 141890 sec
+[2020-03-24 14:18:17,128 INFO] Step 172000/250000; acc:  99.97; ppl:  1.00; xent: 0.00; lr: 0.00030; 19025/19548 tok/s; 142704 sec
+[2020-03-24 14:19:54,541 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 14:32:01,377 INFO] Step 173000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00030; 18442/18945 tok/s; 143528 sec
+[2020-03-24 14:36:20,805 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 14:45:55,694 INFO] Step 174000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00030; 18962/19339 tok/s; 144362 sec
+[2020-03-24 14:52:45,423 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 14:59:57,876 INFO] Step 175000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00030; 18417/18932 tok/s; 145204 sec
+[2020-03-24 15:09:30,396 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 15:13:59,947 INFO] Step 176000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00030; 19304/19662 tok/s; 146046 sec
+[2020-03-24 15:26:00,074 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 15:27:59,384 INFO] Step 177000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00030; 18181/18618 tok/s; 146886 sec
+[2020-03-24 15:41:49,663 INFO] Step 178000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00030; 19368/19866 tok/s; 147716 sec
+[2020-03-24 15:42:34,399 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 15:55:41,361 INFO] Step 179000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00030; 18350/18743 tok/s; 148548 sec
+[2020-03-24 15:59:06,327 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 16:09:28,198 INFO] Step 180000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00029; 19611/19909 tok/s; 149375 sec
+[2020-03-24 16:09:29,049 INFO] Loading valid dataset from data/USPTO-50K/USPTO-50K.valid.0.pt, number of examples: 50000
+[2020-03-24 16:10:56,425 INFO] Validation perplexity: 1.03421
+[2020-03-24 16:10:56,425 INFO] Validation accuracy: 99.5216
+[2020-03-24 16:10:56,428 INFO] Saving checkpoint experiments/checkpoints/USPTO-50K/USPTO-50K_model_step_180000.pt
+[2020-03-24 16:16:42,982 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 16:24:28,984 INFO] Step 181000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00029; 19808/20212 tok/s; 150275 sec
+[2020-03-24 16:32:43,041 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 16:37:58,267 INFO] Step 182000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00029; 19392/19679 tok/s; 151085 sec
+[2020-03-24 16:48:44,535 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 16:51:31,847 INFO] Step 183000/250000; acc:  99.98; ppl:  1.00; xent: 0.00; lr: 0.00029; 19243/19651 tok/s; 151898 sec
+[2020-03-24 17:05:11,897 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
+[2020-03-24 17:05:27,316 INFO] Step 184000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00029; 18437/18748 tok/s; 152734 sec
+[2020-03-24 17:19:24,087 INFO] Step 185000/250000; acc:  99.99; ppl:  1.00; xent: 0.00; lr: 0.00029; 18788/19094 tok/s; 153571 sec
+[2020-03-24 17:21:52,777 INFO] Loading train dataset from data/USPTO-50K/USPTO-50K.train.0.pt, number of examples: 400040
